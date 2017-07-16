@@ -28,4 +28,11 @@ a method or member variable is treated as **default**.
 The method or member variables with default modifier 
 are accessible only within package.
 
+MODIFIER|CLASS|PACKAGE|SUBCLASS|WORLD
+---|---|---|---|---|
+`public`|Y|Y|Y|Y
+`protected`|Y|Y|Y|N
+*no modifier*|Y|Y|N|N
+`private`|Y|N|N|N
+
 Every Class has a default constructor like ```<ClassName>()```

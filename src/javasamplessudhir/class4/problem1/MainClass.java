@@ -12,12 +12,12 @@ package javasamplessudhir.class4.problem1;
 public class MainClass {
 
     public static void main(String[] args) {
-        Employee emp = new Employee(1, "sudhir", 10000, 10, 15);
-        System.out.println("Employee id is " + emp.getId());
-        System.out.println("Employee Name is " + emp.getName());
-        System.out.println("Employee salary is " + emp.getSalary());
-        System.out.println("Employee DA is " + emp.computeDA());
-        System.out.println("Employee HRA is " + emp.computeHRA());
-        emp.setHra_perc(120);
+        Student stdnt = new Student(1, "sudhir", 18, true);
+        Student.setCollegeName("NITW");
+        System.out.println("Student id is " + stdnt.getId());
+        System.out.println("Student Name is " + stdnt.getName());
+        System.out.println("Student age is " + stdnt.getAge());
+        System.out.println("Student gender is " + (stdnt.isMale() ? "Male" : "Female"));
+        System.out.println("Student College is " + Student.getCollegeName());
     }
 }

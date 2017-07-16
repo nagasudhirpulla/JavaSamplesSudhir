@@ -69,4 +69,13 @@ public class Employee {
     public void setHra_perc(int hra_perc) {
         this.hra_perc = hra_perc;
     }
+    
+    public static void main(String[] args) {
+        Employee emp = new Employee(1, "sudhir", 10000, 10, 15);
+        System.out.println("Employee id is " + emp.getId());
+        System.out.println("Employee Name is " + emp.getName());
+        System.out.println("Employee salary is " + emp.getSalary());
+        System.out.println("Employee DA is " + emp.computeDA());
+        System.out.println("Employee HRA is " + emp.computeHRA());
+    }
 }
