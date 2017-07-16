@@ -22,8 +22,10 @@ Run Time Polymorphism examples -
 **Multiple Inheritance not allowed** in java. To facilitate multiple inheritance, we can use **Interfaces**
 
 
-In a java class the declared **variables** are by default **private**
+If no modifier (public, private, protected) is specified, 
+a method or member variable is treated as **default**.
 
-In a java class the declared **methods** are by default **public**
+The method or member variables with default modifier 
+are accessible only within package.
 
 Every Class has a default constructor like ```<ClassName>()```
