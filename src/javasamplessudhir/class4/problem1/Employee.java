@@ -5,6 +5,9 @@
  */
 package javasamplessudhir.class4.problem1;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  *
  * @author Sudhir
@@ -13,6 +16,9 @@ public class Employee {
 
     private int id, salary = 0, da_perc = 0, hra_perc = 0;
     private String name;
+    public static final int default_hra_perc = 5;
+    public static final int default_da_perc = 10;
+    public static final int default_salary = 0;
 
     Employee(int id, String name, int salary, int da_perc, int hra_perc) {
         this.id = id;
@@ -20,6 +26,22 @@ public class Employee {
         this.salary = salary;
         this.hra_perc = hra_perc;
         this.da_perc = da_perc;
+    }
+
+    Employee(int id, String name, int salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+        this.hra_perc = default_hra_perc;
+        this.da_perc = default_da_perc;
+    }
+
+    Employee(int id, String name) {
+        this.id = id;
+        this.name = name;
+        this.salary = default_salary;
+        this.hra_perc = default_hra_perc;
+        this.da_perc = default_da_perc;
     }
 
     public int computeDA() {
@@ -69,13 +91,18 @@ public class Employee {
     public void setHra_perc(int hra_perc) {
         this.hra_perc = hra_perc;
     }
-    
+
     public static void main(String[] args) {
-        Employee emp = new Employee(1, "sudhir", 10000, 10, 15);
-        System.out.println("Employee id is " + emp.getId());
-        System.out.println("Employee Name is " + emp.getName());
-        System.out.println("Employee salary is " + emp.getSalary());
-        System.out.println("Employee DA is " + emp.computeDA());
-        System.out.println("Employee HRA is " + emp.computeHRA());
+        Employee emp0 = new Employee(1, "sudhir", 10000, 10, 15);
+        Employee emp1 = new Employee(1, "emp1", 10000);
+        Employee emp2 = new Employee(1, "emp2");
+        ArrayList<Employee> emps = new ArrayList<>(Arrays.asList(emp0, emp1, emp2));
+        for (Employee emp : emps) {
+            System.out.println("Employee id is " + emp.getId());
+            System.out.println("Employee Name is " + emp.getName());
+            System.out.println("Employee salary is " + emp.getSalary());
+            System.out.println("Employee DA is " + emp.computeDA());
+            System.out.println("Employee HRA is " + emp.computeHRA());
+        }
     }
 }

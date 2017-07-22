@@ -18,8 +18,23 @@ Compile Time Polymorphism examples - Function Overloading, Operator Overloading
 
 Run Time Polymorphism examples - 
 
+## Inheritance in Java
+Inheritance can be defined as the process where one class acquires the properties (methods and fields) of another
+
+Inheritance is implemented in Java using “extends” keyword. 
+
+When the derived class extends base class, the derived class contains all members that are available in base class 
+and the derived class can override the base class members
+
+Links 
+
+https://www.tutorialspoint.com/java/java_inheritance.htm
+
+http://www.rapidprogramming.com/questions-answers/How-is-inheritance-implemented-in-Java--6 
 
 **Multiple Inheritance not allowed** in java. To facilitate multiple inheritance, we can use **Interfaces**
+
+```image of multiple inheritance comes here```
 
 
 If no modifier (public, private, protected) is specified, 
